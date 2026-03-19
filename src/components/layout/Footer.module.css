@@ -1,0 +1,27 @@
+.footer {
+  padding: 1.6rem 5rem;
+  border-top: 1px solid var(--border-dim);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer p {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+}
+
+.green {
+  color: var(--green);
+}
+
+@media (max-width: 1060px) {
+  .footer {
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 1.5rem;
+    text-align: center;
+  }
+}

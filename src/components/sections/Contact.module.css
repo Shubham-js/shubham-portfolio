@@ -1,0 +1,169 @@
+.section {
+  padding: 7rem 5rem;
+}
+
+.inner {
+  max-width: 720px;
+}
+
+.email {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--text);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 1rem;
+  letter-spacing: -0.03em;
+  border-bottom: 1px solid var(--border-dim);
+  padding-bottom: 1.4rem;
+  transition: color 0.2s;
+  position: relative;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.email::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 1px;
+  background: var(--green);
+  transition: left 0.4s;
+}
+
+.email:hover {
+  color: var(--green);
+}
+
+.email:hover::after {
+  left: 0;
+}
+
+.desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.85;
+  margin-bottom: 2.25rem;
+  font-weight: 300;
+}
+
+.desc strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.link {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.6rem 1.05rem;
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  gap: 0.42rem;
+  transition: border-color 0.2s, color 0.2s, box-shadow 0.2s, transform 0.15s;
+  letter-spacing: 0.06em;
+}
+
+.link:hover {
+  border-color: var(--green);
+  color: var(--green);
+  box-shadow: var(--glow);
+  transform: translateY(-2px);
+}
+
+.linkIcon {
+  display: flex;
+  align-items: center;
+}
+
+.linkIcon svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* ── Resume inline card ── */
+.resumeRow {
+  padding: 1.4rem;
+  background: var(--bg2);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.resumeRow:hover {
+  border-color: var(--border);
+  box-shadow: var(--glow);
+}
+
+.resumeTitle {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.92rem;
+  margin-bottom: 0.2rem;
+  color: var(--text);
+}
+
+.resumeSub {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+
+.resumeBtn {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 0.6rem 1.3rem;
+  background: var(--green);
+  color: var(--bg);
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.07em;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  transition: box-shadow 0.2s, transform 0.15s;
+  flex-shrink: 0;
+  border-radius: 2px;
+}
+
+.resumeBtn:hover {
+  box-shadow: var(--glow-strong);
+  transform: translateY(-1px);
+}
+
+.resumeBtn svg {
+  width: 12px;
+  height: 12px;
+}
+
+@media (max-width: 1060px) {
+  .section {
+    padding: 5rem 1.5rem;
+  }
+
+  .resumeRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

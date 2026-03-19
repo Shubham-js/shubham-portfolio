@@ -1,0 +1,404 @@
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  align-items: center;
+  padding: 8rem 5rem 5rem;
+  position: relative;
+  overflow: hidden;
+  gap: 4rem;
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 60% 80% at 20% 50%, black, transparent);
+  pointer-events: none;
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 72% 50%, transparent 20%, rgba(6, 6, 8, 0.6) 100%);
+  pointer-events: none;
+}
+
+/* ── LEFT ── */
+.left {
+  position: relative;
+  z-index: 2;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--green);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--green-pale);
+  border: 1px solid var(--border);
+  padding: 0.38rem 1rem;
+  border-radius: 100px;
+  margin-bottom: 1.75rem;
+  animation: sfd 0.8s ease both;
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  background: var(--green);
+  border-radius: 50%;
+  animation: pdot 2s infinite;
+  flex-shrink: 0;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(3.8rem, 8vw, 7rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.75rem;
+  animation: sfu 0.85s ease 0.12s both;
+}
+
+.n1 {
+  display: block;
+  color: var(--text);
+}
+
+.n2 {
+  display: block;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.22);
+}
+
+/* ── RPG Row ── */
+.rpgRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  animation: sfu 0.85s ease 0.22s both;
+  flex-wrap: wrap;
+}
+
+.level {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--bg);
+  background: var(--green);
+  padding: 0.28rem 0.7rem;
+  border-radius: 3px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
+}
+
+.xpWrap {
+  flex: 1;
+  min-width: 140px;
+  max-width: 200px;
+}
+
+.xpLabel {
+  font-family: var(--font-mono);
+  font-size: 0.57rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+
+.xpTrack {
+  height: 4px;
+  background: var(--bg4);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.xpFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--green-dim), var(--green));
+  border-radius: 2px;
+  width: 0;
+  transition: width 2s cubic-bezier(0.19, 1, 0.22, 1);
+  box-shadow: 0 0 8px var(--green);
+}
+
+.rpgTitle {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+
+/* ── Role / Typewriter ── */
+.role {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--green);
+  letter-spacing: 0.04em;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  animation: sfu 0.85s ease 0.3s both;
+  min-height: 1.6rem;
+}
+
+.rolePrefix {
+  color: var(--text-muted);
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  background: var(--green);
+  vertical-align: middle;
+  animation: blink 1s step-end infinite;
+  margin-left: 1px;
+  flex-shrink: 0;
+}
+
+/* ── Desc ── */
+.desc {
+  font-size: 0.98rem;
+  color: var(--text-muted);
+  line-height: 1.85;
+  max-width: 490px;
+  margin-bottom: 2.25rem;
+  font-weight: 300;
+  animation: sfu 0.85s ease 0.38s both;
+}
+
+.desc strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* ── Buttons ── */
+.btns {
+  display: flex;
+  gap: 0.85rem;
+  align-items: center;
+  flex-wrap: wrap;
+  animation: sfu 0.85s ease 0.46s both;
+}
+
+.btnPrimary {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  background: var(--green);
+  color: var(--bg);
+  padding: 0.8rem 1.75rem;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.07em;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  transition: box-shadow 0.25s, transform 0.15s;
+}
+
+.btnPrimary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(-110%);
+  transition: transform 0.3s;
+}
+
+.btnPrimary:hover::before { transform: translateX(0); }
+.btnPrimary:hover { box-shadow: var(--glow-strong); }
+
+.btnPrimary svg {
+  width: 13px;
+  height: 13px;
+}
+
+.btnGhost {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  background: transparent;
+  color: var(--green);
+  padding: 0.8rem 1.75rem;
+  border: 1px solid var(--green);
+  cursor: pointer;
+  letter-spacing: 0.07em;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: background 0.25s, color 0.25s, box-shadow 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+
+.btnGhost::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--green);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+  z-index: 0;
+}
+
+.btnGhost:hover::before { transform: scaleX(1); }
+.btnGhost:hover { color: var(--bg); box-shadow: var(--glow-strong); }
+
+.btnGhost svg,
+.btnGhost span {
+  position: relative;
+  z-index: 1;
+}
+
+.btnGhost svg {
+  width: 13px;
+  height: 13px;
+  fill: currentColor;
+}
+
+.btnSecondary {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  background: transparent;
+  color: var(--text-muted);
+  padding: 0.8rem 1.75rem;
+  border: 1px solid var(--text-dim);
+  cursor: pointer;
+  letter-spacing: 0.07em;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.btnSecondary:hover {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+/* ── RIGHT ── */
+.right {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+/* ── RPG Stats ── */
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  margin-top: 0.85rem;
+  width: 340px;
+}
+
+.stat {
+  background: var(--bg2);
+  border: 1px solid var(--border-dim);
+  padding: 0.8rem 1rem;
+  border-radius: var(--radius);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  cursor: default;
+}
+
+.stat:hover {
+  border-color: var(--border);
+  box-shadow: var(--glow);
+}
+
+.statLabel {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+
+.statVal {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--green);
+  line-height: 1;
+}
+
+.statSub {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--text-dim);
+  margin-top: 0.15rem;
+  letter-spacing: 0.05em;
+}
+
+/* ── Scroll hint ── */
+.scroll {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 5rem;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text-dim);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  animation: bounce 2s ease-in-out infinite 0.8s;
+}
+
+.scroll::before {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background: var(--text-dim);
+}
+
+@media (max-width: 1060px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 7rem 1.5rem 4rem;
+    gap: 2.5rem;
+  }
+
+  .right {
+    align-items: center;
+    width: 100%;
+  }
+
+  .stats {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .scroll {
+    display: none;
+  }
+
+  .name {
+    font-size: clamp(3rem, 15vw, 5rem);
+  }
+}

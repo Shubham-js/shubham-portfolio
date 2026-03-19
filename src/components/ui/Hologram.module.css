@@ -1,0 +1,337 @@
+.display {
+  position: relative;
+  z-index: 2;
+  animation: sfr 0.9s ease 0.3s both;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scene {
+  position: relative;
+  width: 340px;
+  flex-shrink: 0;
+}
+
+/* ── Orbit rings ── */
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 255, 136, 0.07);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: orb 14s linear infinite;
+}
+
+.orbit::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: var(--green);
+  border-radius: 50%;
+  box-shadow: 0 0 12px var(--green), 0 0 24px var(--green);
+  transform: translateX(-50%);
+}
+
+.orbit2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 440px;
+  height: 130px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 255, 136, 0.04);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: orb 9s linear infinite reverse;
+}
+
+.orbit2::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  right: 25%;
+  width: 6px;
+  height: 6px;
+  background: rgba(0, 200, 255, 0.75);
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00c8ff;
+}
+
+@keyframes orb {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* ── Frame ── */
+.frame {
+  position: relative;
+  border-radius: 10px;
+  overflow: visible;
+}
+
+.corner {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  z-index: 12;
+  border-color: var(--green);
+  border-style: solid;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.cTl { top: 0; left: 0; border-width: 2px 0 0 2px; border-radius: 10px 0 0 0; }
+.cTr { top: 0; right: 0; border-width: 2px 2px 0 0; border-radius: 0 10px 0 0; }
+.cBl { bottom: 37px; left: 0; border-width: 0 0 2px 2px; border-radius: 0 0 0 10px; }
+.cBr { bottom: 37px; right: 0; border-width: 0 2px 2px 0; border-radius: 0 0 10px 0; }
+
+/* ── Image stack ── */
+.imgWrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: saturate(0.12) brightness(0.88) sepia(0.25) hue-rotate(88deg);
+  animation: holoAppear 1.4s ease-out 0.6s both;
+}
+
+@keyframes holoAppear {
+  0%   { opacity: 0; transform: scaleY(0.03); filter: brightness(7) saturate(0) hue-rotate(90deg); }
+  15%  { opacity: 0.9; transform: scaleY(1.04); }
+  28%  { opacity: 0.2; transform: scaleY(0.97); }
+  42%  { opacity: 1; transform: scaleY(1.01); }
+  58%  { opacity: 0.45; }
+  72%  { opacity: 1; }
+  100% { opacity: 1; transform: scaleY(1); }
+}
+
+.color {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 136, 0.22) 0%,
+    rgba(0, 180, 255, 0.14) 33%,
+    rgba(110, 0, 255, 0.08) 66%,
+    rgba(0, 255, 136, 0.18) 100%
+  );
+  background-size: 300% 300%;
+  animation: hshift 7s ease-in-out infinite;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+@keyframes hshift {
+  0%   { background-position: 0% 0%; }
+  50%  { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+.scanlines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(0, 255, 136, 0.055) 3px,
+    rgba(0, 255, 136, 0.055) 4px
+  );
+  animation: scanRoll 5s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes scanRoll {
+  0%   { background-position: 0 0; }
+  100% { background-position: 0 300px; }
+}
+
+.bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 52px;
+  background: linear-gradient(to bottom, transparent, rgba(0, 255, 136, 0.2), transparent);
+  animation: barSweep 4s ease-in-out infinite;
+  pointer-events: none;
+  top: -52px;
+}
+
+@keyframes barSweep {
+  0%  { top: -52px; opacity: 1; }
+  82% { opacity: 1; }
+  100% { top: 110%; opacity: 0; }
+}
+
+.chroma {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 80, 0.06) 0%,
+    transparent 6%,
+    transparent 94%,
+    rgba(0, 255, 200, 0.07) 100%
+  );
+  animation: chromaAnim 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes chromaAnim {
+  0%, 86%, 100% { opacity: 1; transform: none; }
+  88%  { opacity: 0.5; transform: translateX(2px); }
+  91%  { opacity: 1; transform: translateX(-1px); }
+  94%  { opacity: 0.7; transform: translateX(1px); }
+  97%  { opacity: 1; transform: none; }
+}
+
+.glitch {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 255, 136, 0.07);
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  animation: glitchClip 9s step-end infinite;
+  pointer-events: none;
+}
+
+@keyframes glitchClip {
+  0%, 87%, 100% { clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); opacity: 0; }
+  88.5% { clip-path: polygon(0 25%, 100% 25%, 100% 30%, 0 30%); opacity: 1; transform: translateX(-3px); }
+  90%   { clip-path: polygon(0 58%, 100% 58%, 100% 63%, 0 63%); opacity: 1; transform: translateX(2px); }
+  92%   { clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); opacity: 0; transform: none; }
+}
+
+.edge {
+  position: absolute;
+  inset: -1px;
+  border-radius: 11px 11px 0 0;
+  border: 1px solid rgba(0, 255, 136, 0.28);
+  box-shadow: 0 0 18px rgba(0, 255, 136, 0.22), inset 0 0 24px rgba(0, 255, 136, 0.05);
+  animation: edgePulse 3.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes edgePulse {
+  0%, 100% { opacity: 0.65; box-shadow: 0 0 14px rgba(0, 255, 136, 0.18), inset 0 0 20px rgba(0, 255, 136, 0.04); }
+  50%       { opacity: 1;    box-shadow: 0 0 30px rgba(0, 255, 136, 0.38), inset 0 0 32px rgba(0, 255, 136, 0.1); }
+}
+
+/* ── HUD ── */
+.hud {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.85rem;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+}
+
+.hudDot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: var(--green);
+  border-radius: 50%;
+  animation: pdot 2s infinite;
+  margin-right: 0.3rem;
+  vertical-align: middle;
+}
+
+.hudOn { color: var(--green); }
+.hudId { color: var(--text-dim); }
+
+/* ── Chips ── */
+.chips {
+  position: absolute;
+  top: 0;
+  right: -118px;
+  bottom: 37px;
+  pointer-events: none;
+  width: 110px;
+}
+
+.chip {
+  position: absolute;
+  right: 0;
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  color: var(--green);
+  background: rgba(6, 6, 8, 0.9);
+  border: 1px solid var(--border);
+  padding: 0.22rem 0.5rem;
+  border-radius: 3px;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  animation: chipAnim 4s ease-in-out infinite;
+  opacity: 0;
+}
+
+.chip::after {
+  content: '';
+  position: absolute;
+  left: -16px;
+  top: 50%;
+  height: 1px;
+  width: 12px;
+  background: linear-gradient(to left, var(--green), transparent);
+  transform: translateY(-50%);
+}
+
+.hc1 { top: 8%;  animation-delay: 0.9s; }
+.hc2 { top: 26%; animation-delay: 1.5s; }
+.hc3 { top: 44%; animation-delay: 2.1s; }
+.hc4 { top: 62%; animation-delay: 2.7s; }
+.hc5 { top: 79%; animation-delay: 3.3s; }
+
+@keyframes chipAnim {
+  0%, 100% { opacity: 0; transform: translateX(10px); }
+  20%, 80%  { opacity: 1; transform: translateX(0); }
+}
+
+/* ── Pedestal + base glow ── */
+.ped {
+  width: 2px;
+  height: 24px;
+  background: linear-gradient(to bottom, var(--green), transparent);
+  margin: 0 auto;
+  opacity: 0.5;
+}
+
+.baseGlow {
+  width: 300px;
+  height: 12px;
+  background: radial-gradient(ellipse at center, rgba(0, 255, 136, 0.52) 0%, rgba(0, 255, 136, 0.1) 55%, transparent 75%);
+  border-radius: 50%;
+  filter: blur(3px);
+  margin: 0 auto;
+  animation: basePulse 3s ease-in-out infinite;
+}
+
+@keyframes basePulse {
+  0%, 100% { opacity: 0.65; transform: scaleX(1); }
+  50%       { opacity: 1;    transform: scaleX(1.08); }
+}
+
+@media (max-width: 1060px) {
+  .chips { display: none; }
+  .scene { max-width: 300px; }
+}
