@@ -119,9 +119,7 @@ export function Terminal() {
 
     if (cmd === "") return;
 
-    const newLines: Line[] = [
-      { id: idRef.current++, text: cmd, type: "cmd" },
-    ];
+    const newLines: Line[] = [{ id: idRef.current++, text: cmd, type: "cmd" }];
 
     if (cmd === "clear") {
       setLines([]);
@@ -168,7 +166,9 @@ export function Terminal() {
       <div className={styles.body} ref={bodyRef}>
         {lines.map((line) =>
           line.type === "blank" ? (
-            <span key={line.id} className={styles.line}>&nbsp;</span>
+            <span key={line.id} className={styles.line}>
+              &nbsp;
+            </span>
           ) : line.type === "cmd" ? (
             <span key={line.id} className={styles.line}>
               <span className={styles.prompt}>$</span>{" "}
@@ -181,7 +181,7 @@ export function Terminal() {
             >
               {line.text}
             </span>
-          )
+          ),
         )}
 
         {/* skill bars — always shown after initial cmd */}

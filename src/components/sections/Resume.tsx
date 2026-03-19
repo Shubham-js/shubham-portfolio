@@ -16,7 +16,7 @@ export function Resume() {
         </h2>
 
         <p className={styles.sub}>
-          3+ years at Innovaccer, MakeMyTrip &amp; Zunroof. Top 0.5% on
+          4+ years at Innovaccer, MakeMyTrip &amp; Zunroof. Top 0.5% on
           LeetCode. 9.11 CGPA. Everything on one page.
         </p>
 
@@ -42,7 +42,7 @@ export function Resume() {
           </a>
           <span className={styles.sep}>&middot;</span>
           <a
-            href="https://linkedin.com/in/shubhamjain"
+            href="https://www.linkedin.com/in/shubham-js/"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.rl}

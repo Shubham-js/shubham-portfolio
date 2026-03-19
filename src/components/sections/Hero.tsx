@@ -38,7 +38,7 @@ export function Hero() {
       <div className={styles.left}>
         <div className={styles.status}>
           <span className={styles.statusDot} />
-          Open to SDE-2 / Senior roles &middot; Noida
+          Open to Opportunities &middot; Across India
         </div>
 
         <h1 className={styles.name}>
@@ -54,7 +54,7 @@ export function Hero() {
               <div ref={xpRef} className={styles.xpFill} />
             </div>
           </div>
-          <div className={styles.rpgTitle}>Full Stack Engineer</div>
+          <div className={styles.rpgTitle}>AI Engineer</div>
         </div>
 
         <div className={styles.role}>
@@ -66,7 +66,7 @@ export function Hero() {
         <p className={styles.desc}>
           Building <strong>high-performance web products</strong> that scale —
           from real-time healthcare platforms to travel features used by
-          millions. <strong>3+ years</strong> shipping features that move the
+          millions. <strong>4+ years</strong> shipping features that move the
           needle.
         </p>
 
@@ -78,7 +78,7 @@ export function Hero() {
             View My Work
           </a>
           <a
-            href="/resume.pdf"
+            href="/ShubhamJain_Resume.pdf"
             download
             className={styles.btnGhost}
             data-magnetic

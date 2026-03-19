@@ -47,7 +47,7 @@ export function Contact() {
         </a>
 
         <p className={styles.desc}>
-          I&apos;m open to <strong>SDE-2 / Senior Engineer</strong> roles,
+          I&apos;m open to <strong>Software / AI Engineer</strong> roles,
           exciting product challenges, and interesting collaborations. Drop me a
           message.
         </p>
@@ -73,7 +73,7 @@ export function Contact() {
           <div>
             <div className={styles.resumeTitle}>Want my full resume?</div>
             <div className={styles.resumeSub}>
-              PDF &middot; Updated 2025 &middot; 1 page &middot; All experience
+              PDF &middot; Updated 2026 &middot; 1 page &middot; All experience
               included
             </div>
           </div>

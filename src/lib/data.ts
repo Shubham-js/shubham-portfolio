@@ -12,16 +12,18 @@ export const ROLES = [
   "Problem Architect",
   "Performance Optimizer",
   "Code Craftsman",
-  "React Specialist",
+  "React Developer",
   "Node.js Developer",
 ];
 
 export const RPG_STATS: RpgStat[] = [
-  { label: "LeetCode", value: "1250+", sub: "Problems solved", xp: "+150 XP" },
-  { label: "CGPA", value: "9.11", sub: "/ 10.0 · RCET", xp: "+200 XP" },
+  { label: "LeetCode", value: "1300+", sub: "Problems solved", xp: "+150 XP" },
+  { label: "B.tech", value: "9.11", sub: "/ 10.0 · RCET", xp: "+200 XP" },
   {
     label: "Build Time",
     value: "45%",
+
+
     sub: "Reduced · Innovaccer",
     xp: "+300 XP",
   },
@@ -99,11 +101,13 @@ export const EXPERIENCE: Experience[] = [
     location: "Bhilai, India",
     tag: "RCET",
     bullets: [
+      "<strong>Student of the Year Batch 2018-2022</strong>",
+      "Lead <strong>Rungta Business Incubator</strong>  (RuBI), the entrepreneurship cell of RCET, to promote entrepreneurship and innovation.",
       "Created <strong>Toodle</strong>, an e-learning platform adopted by 10,000+ engineering students.",
       "Finalist at <strong>Smart India Hackathon 2020</strong> with project Tribie.",
       "Received <strong>Letter of Felicitation from the CSVTU Vice Chancellor</strong> for the Toodle platform.",
     ],
-    techs: ["C++", "Data Structures", "Algorithms", "System Design"],
+    techs: ["Entrepreneurship", "Leadership", "Coding"],
   },
 ];
 
@@ -173,28 +177,48 @@ export const PROJECTS: Project[] = [
     description:
       "Full-featured social platform with auth, post feed, profile management & real-time notifications using Firebase.",
     stack: ["React.js", "Firebase", "Redux", "CSS"],
-    link: "https://github.com",
+    link: "https://github.com/Shubham-js/Linkedin-Project",
     linkLabel: "View on GitHub ↗",
   },
   {
     id: "portfolio-v1",
     num: "03 — Personal",
-    title: "Portfolio v1",
+    title: "Portfolio",
     description:
       "First iteration of personal portfolio — clean minimal design with project showcases & Firebase hosting.",
-    stack: ["React.js", "Firebase", "CSS3"],
-    link: "#",
+    stack: ["React.js", "Next.js", "CSS3"],
+    link: "https://shubhamjs.in",
     linkLabel: "Live Preview ↗",
   },
   {
     id: "tribie",
     num: "04 — Hackathon · SIH 2020",
-    title: "Tribie — Community Travel App",
+    title: "Tribie — Community Marketplace App",
     description:
-      "National finalist at Smart India Hackathon 2020. Community-driven group travel & itinerary app built in 36 hours.",
+      "National finalist at Smart India Hackathon 2020. Community-driven multivendor marketplace built in 36 hours.",
     stack: ["React Native", "Node.js", "Firebase"],
     link: "#",
     linkLabel: "SIH 2020 Finalist ↗",
+  },
+  {
+    id:'mind-relaxtion-app',
+    num: "05 — Mind Relaxation App",
+    title: "Mind Relaxation App",
+    description:
+      "A web app that helps users relax and de-stress by drawing shapes and patterns and music on every key press.",
+    stack: ["Paper.js", "JavaScript", "HTML", "CSS"],
+    link: "https://github.com/Shubham-js/Patatap-Clone",
+    linkLabel: "View on GitHub ↗",
+  },
+  {
+    id:'gmail-clone',
+    num: "06 — Gmail Clone",
+    title: "Gmail Clone",
+    description:
+      "A clone of Gmail that looks like Gmail.",
+    stack: ["React.js", "Tailwind CSS"],
+    link: "https://github.com/Shubham-js/gmail-clone",
+    linkLabel: "View on GitHub ↗",
   },
 ];
 
