@@ -5,7 +5,7 @@ export function Projects() {
   return (
     <section className={styles.section} id="projects">
       <div className="secLabel reveal">
-        // 04 <span>&mdash; Projects</span>
+        {/* 04 <span>&mdash; Projects</span> */}
       </div>
       <h2 className="secTitle reveal">
         Things I&apos;ve <em>built</em>.

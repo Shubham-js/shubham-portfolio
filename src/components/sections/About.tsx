@@ -22,7 +22,7 @@ export function About() {
         {/* Left — text */}
         <div className="reveal">
           <div className="secLabel">
-            // 01 <span>&mdash; About Me</span>
+            {/* 01 <span>&mdash; About Me</span> */}
           </div>
           <h2 className="secTitle">
             Crafting digital<br />

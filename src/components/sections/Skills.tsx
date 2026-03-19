@@ -18,7 +18,7 @@ export function Skills() {
   return (
     <section className={styles.section} id="skills">
       <div className="secLabel reveal">
-        // 03 <span>&mdash; Skills</span>
+        {/* 03 <span>&mdash; Skills</span> */}
       </div>
       <h2 className="secTitle reveal">
         My <em>tech</em> <strong>arsenal</strong>.

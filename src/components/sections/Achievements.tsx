@@ -5,7 +5,7 @@ export function Achievements() {
   return (
     <section className={styles.section} id="achievements">
       <div className="secLabel reveal">
-        // 05 <span>&mdash; Recognition</span>
+        {/* 05 <span>&mdash; Recognition</span> */}
       </div>
       <h2 className="secTitle reveal">
         <em>Milestones</em> &amp; <strong>wins</strong>.

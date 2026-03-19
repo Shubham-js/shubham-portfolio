@@ -34,7 +34,7 @@ export function Contact() {
     <section className={styles.section} id="contact">
       <div className={`${styles.inner} reveal`}>
         <div className="secLabel">
-          // 06 <span>&mdash; Let&apos;s Talk</span>
+          {/* 06 <span>&mdash; Let&apos;s Talk</span> */}
         </div>
         <h2 className="secTitle">
           Let&apos;s build

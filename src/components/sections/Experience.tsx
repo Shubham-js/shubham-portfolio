@@ -5,7 +5,7 @@ export function Experience() {
   return (
     <section className={styles.section} id="experience">
       <div className="secLabel reveal">
-        // 02 <span>&mdash; Experience</span>
+        {/* 02 <span>&mdash; Experience</span> */}
       </div>
       <h2 className="secTitle reveal">
         Where I&apos;ve <em>shipped</em>.
