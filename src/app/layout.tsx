@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Shubham Jain — SDE-2 | Full Stack Engineer",
+  title: "Shubham Jain — Portfolio",
   description:
     "Portfolio of Shubham Jain, Software Development Engineer 2 at Innovaccer. Building high-performance web products with React, Next.js, Node.js and TypeScript.",
   keywords: [
@@ -21,6 +21,11 @@ export const metadata: Metadata = {
     description:
       "SDE-2 at Innovaccer · Top 0.5% LeetCode · 9.11 CGPA · 3+ years shipping features at scale.",
     type: "website",
+  },
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
+    shortcut: "/favicon.svg",
   },
 };
 
