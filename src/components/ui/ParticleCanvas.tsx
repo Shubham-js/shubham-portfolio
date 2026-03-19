@@ -66,7 +66,7 @@ export function ParticleCanvas() {
         const alpha = p.o * (t < 0.1 ? t / 0.1 : t > 0.85 ? (1 - t) / 0.15 : 1);
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(0,255,136,${alpha})`;
+        ctx.fillStyle = `rgba(0,229,255,${alpha})`;
         ctx.fill();
       }
 
@@ -77,7 +77,7 @@ export function ParticleCanvas() {
             ctx.beginPath();
             ctx.moveTo(pts[i].x, pts[i].y);
             ctx.lineTo(pts[j].x, pts[j].y);
-            ctx.strokeStyle = `rgba(0,255,136,${0.055 * (1 - d / 80)})`;
+            ctx.strokeStyle = `rgba(0,229,255,${0.055 * (1 - d / 80)})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }

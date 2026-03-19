@@ -65,7 +65,7 @@
 
 .item:hover .dot {
   border-color: var(--green);
-  box-shadow: 0 0 14px rgba(0, 255, 136, 0.5);
+  box-shadow: 0 0 14px rgba(0, 229, 255, 0.5);
   transform: translateX(-50%) scale(1.3);
 }
 

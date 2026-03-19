@@ -11,7 +11,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 50% 70% at 50% 50%, rgba(0, 255, 136, 0.05), transparent 70%);
+  background: radial-gradient(ellipse 50% 70% at 50% 50%, rgba(0, 229, 255, 0.05), transparent 70%);
   pointer-events: none;
 }
 
@@ -100,7 +100,7 @@
 }
 
 .dlBtn:hover {
-  box-shadow: 0 0 60px rgba(0, 255, 136, 0.45);
+  box-shadow: 0 0 60px rgba(0, 229, 255, 0.45);
   transform: translateY(-3px);
 }
 

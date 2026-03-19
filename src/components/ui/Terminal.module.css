@@ -3,7 +3,7 @@
   border: 1px solid var(--border);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 0 40px rgba(0, 255, 136, 0.08), 0 24px 60px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 40px rgba(0, 229, 255, 0.08), 0 24px 60px rgba(0, 0, 0, 0.5);
   animation: sfr 0.9s ease 0.5s both;
   width: 100%;
 }

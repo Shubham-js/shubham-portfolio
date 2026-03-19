@@ -13,16 +13,16 @@
   --bg2: #0b0c0f;
   --bg3: #111317;
   --bg4: #16181e;
-  --green: #00ff88;
-  --green-dim: #00c864;
-  --green-pale: rgba(0, 255, 136, 0.07);
+  --green: #00e5ff;
+  --green-dim: #00b0e8;
+  --green-pale: rgba(0, 229, 255, 0.07);
   --text: #dfe6f0;
   --text-muted: #5a6478;
   --text-dim: #2a2f3a;
-  --border: rgba(0, 255, 136, 0.13);
+  --border: rgba(0, 229, 255, 0.13);
   --border-dim: rgba(255, 255, 255, 0.055);
-  --glow: 0 0 28px rgba(0, 255, 136, 0.18);
-  --glow-strong: 0 0 48px rgba(0, 255, 136, 0.3);
+  --glow: 0 0 28px rgba(0, 229, 255, 0.18);
+  --glow-strong: 0 0 48px rgba(0, 229, 255, 0.3);
   --radius: 6px;
   --font-mono: 'JetBrains Mono', monospace;
   --font-display: 'Syne', sans-serif;
@@ -76,7 +76,7 @@ body::before {
   position: fixed;
   width: 34px;
   height: 34px;
-  border: 1.5px solid rgba(0, 255, 136, 0.35);
+  border: 1.5px solid rgba(0, 229, 255, 0.35);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9998;
@@ -127,7 +127,7 @@ body::before {
   to   { opacity: 1; transform: none; }
 }
 @keyframes pdot {
-  0%   { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.5); }
+  0%   { box-shadow: 0 0 0 0 rgba(0, 229, 255, 0.5); }
   70%  { box-shadow: 0 0 0 8px transparent; }
   100% { box-shadow: 0 0 0 0 transparent; }
 }

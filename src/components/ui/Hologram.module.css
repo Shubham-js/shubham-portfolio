@@ -21,7 +21,7 @@
   width: 400px;
   height: 400px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 255, 136, 0.07);
+  border: 1px solid rgba(0, 229, 255, 0.07);
   pointer-events: none;
   transform: translate(-50%, -50%);
   animation: orb 14s linear infinite;
@@ -47,7 +47,7 @@
   width: 440px;
   height: 130px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 255, 136, 0.04);
+  border: 1px solid rgba(0, 229, 255, 0.04);
   pointer-events: none;
   transform: translate(-50%, -50%);
   animation: orb 9s linear infinite reverse;
@@ -123,10 +123,10 @@
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(0, 255, 136, 0.22) 0%,
+    rgba(0, 229, 255, 0.22) 0%,
     rgba(0, 180, 255, 0.14) 33%,
     rgba(110, 0, 255, 0.08) 66%,
-    rgba(0, 255, 136, 0.18) 100%
+    rgba(0, 229, 255, 0.18) 100%
   );
   background-size: 300% 300%;
   animation: hshift 7s ease-in-out infinite;
@@ -147,8 +147,8 @@
     0deg,
     transparent,
     transparent 3px,
-    rgba(0, 255, 136, 0.055) 3px,
-    rgba(0, 255, 136, 0.055) 4px
+    rgba(0, 229, 255, 0.055) 3px,
+    rgba(0, 229, 255, 0.055) 4px
   );
   animation: scanRoll 5s linear infinite;
   pointer-events: none;
@@ -164,7 +164,7 @@
   left: 0;
   right: 0;
   height: 52px;
-  background: linear-gradient(to bottom, transparent, rgba(0, 255, 136, 0.2), transparent);
+  background: linear-gradient(to bottom, transparent, rgba(0, 229, 255, 0.2), transparent);
   animation: barSweep 4s ease-in-out infinite;
   pointer-events: none;
   top: -52px;
@@ -201,7 +201,7 @@
 .glitch {
   position: absolute;
   inset: 0;
-  background: rgba(0, 255, 136, 0.07);
+  background: rgba(0, 229, 255, 0.07);
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   animation: glitchClip 9s step-end infinite;
   pointer-events: none;
@@ -218,15 +218,15 @@
   position: absolute;
   inset: -1px;
   border-radius: 11px 11px 0 0;
-  border: 1px solid rgba(0, 255, 136, 0.28);
-  box-shadow: 0 0 18px rgba(0, 255, 136, 0.22), inset 0 0 24px rgba(0, 255, 136, 0.05);
+  border: 1px solid rgba(0, 229, 255, 0.28);
+  box-shadow: 0 0 18px rgba(0, 229, 255, 0.22), inset 0 0 24px rgba(0, 229, 255, 0.05);
   animation: edgePulse 3.5s ease-in-out infinite;
   pointer-events: none;
 }
 
 @keyframes edgePulse {
-  0%, 100% { opacity: 0.65; box-shadow: 0 0 14px rgba(0, 255, 136, 0.18), inset 0 0 20px rgba(0, 255, 136, 0.04); }
-  50%       { opacity: 1;    box-shadow: 0 0 30px rgba(0, 255, 136, 0.38), inset 0 0 32px rgba(0, 255, 136, 0.1); }
+  0%, 100% { opacity: 0.65; box-shadow: 0 0 14px rgba(0, 229, 255, 0.18), inset 0 0 20px rgba(0, 229, 255, 0.04); }
+  50%       { opacity: 1;    box-shadow: 0 0 30px rgba(0, 229, 255, 0.38), inset 0 0 32px rgba(0, 229, 255, 0.1); }
 }
 
 /* ── HUD ── */
@@ -319,7 +319,7 @@
 .baseGlow {
   width: 300px;
   height: 12px;
-  background: radial-gradient(ellipse at center, rgba(0, 255, 136, 0.52) 0%, rgba(0, 255, 136, 0.1) 55%, transparent 75%);
+  background: radial-gradient(ellipse at center, rgba(0, 229, 255, 0.52) 0%, rgba(0, 229, 255, 0.1) 55%, transparent 75%);
   border-radius: 50%;
   filter: blur(3px);
   margin: 0 auto;

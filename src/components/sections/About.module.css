@@ -13,7 +13,7 @@
   width: 450px;
   height: 450px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(0, 255, 136, 0.04), transparent 70%);
+  background: radial-gradient(circle, rgba(0, 229, 255, 0.04), transparent 70%);
   pointer-events: none;
 }
 
