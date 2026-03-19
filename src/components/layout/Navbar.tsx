@@ -38,7 +38,7 @@ export function Navbar() {
           Resume
         </a>
         <a href="#contact" className={styles.btnHire} data-magnetic>
-          Hire Me
+          Get in touch
         </a>
       </div>
     </nav>
