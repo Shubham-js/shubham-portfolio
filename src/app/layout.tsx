@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Shubham Jain — Full Stack Engineer",
     description:
-      "SDE-2 at Innovaccer · Top 0.5% LeetCode · 9.11 CGPA · 3+ years shipping features at scale.",
+      "SDE-2 at Innovaccer · Ex Makemytrip · 9.11 CGPA · 4+ years shipping features at scale.",
     type: "website",
   },
   icons: {

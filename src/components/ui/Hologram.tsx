@@ -51,7 +51,7 @@ export function Hologram() {
           <div className={`${styles.chip} ${styles.hc2}`}>Top 0.5% LC</div>
           <div className={`${styles.chip} ${styles.hc3}`}>Node · 88%</div>
           <div className={`${styles.chip} ${styles.hc4}`}>9.11 CGPA</div>
-          <div className={`${styles.chip} ${styles.hc5}`}>3+ yrs exp</div>
+          <div className={`${styles.chip} ${styles.hc5}`}>4+ yrs exp</div>
         </div>
       </div>
 
